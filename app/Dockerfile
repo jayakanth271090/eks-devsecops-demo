@@ -9,7 +9,7 @@ FROM python:3.11-slim
 WORKDIR /app  
 RUN useradd -m appuser
 COPY --from=builder /root/.local /home/appuser/.local
-COPY app.py
+COPY app.py .
 
 ENV PATH=/home/appuser/.local/bin:$PATH 
 USER appuser
