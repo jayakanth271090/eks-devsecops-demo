@@ -16,8 +16,8 @@ module "eks" {
         general = {
             ami_type = "AL2023_x86_64_STANDARD" # Amazon EKS optimized AMI for Kubernetes 1.32
             min_size = 1
-            max_size = 3
-            desired_size = 2
+            max_size = 5
+            desired_size = 4
             instance_types = ["t3.micro"]
             capacity_type = "ON_DEMAND"
         }
